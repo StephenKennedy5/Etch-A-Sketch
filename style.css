@@ -2,6 +2,7 @@ body {
     display: flex;
     flex: 1;
     justify-content: center;
+    background-color: white;
 }
 
 #container {
@@ -11,8 +12,13 @@ body {
 }
 
 #container > div {
-    background-color: black;
+    /* background-color: black; */
     /* aspect-ratio: 1; */
     height: 50px;
     width: 50px;
 }
+
+#container > div:hover {
+    background-color: black;
+}
+

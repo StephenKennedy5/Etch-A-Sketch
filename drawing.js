@@ -1,4 +1,4 @@
-
+// Creates 9x9 grid
 function make_grid() {
     const toAdd = document.getElementById('container');
     
@@ -11,5 +11,25 @@ function make_grid() {
     }
 }
 
-make_grid();
+// change color of each grid when hovered
+function drawing() {
+    const divs = document.querySelectorAll("#container > div");
 
+    divs.forEach((item) => {
+        const gridItem = item;
+        gridItem.count = 0;
+        addEventListener('mouseover', (e) => {
+            e.target.style.backgroundColor = 'black';
+            e.target.style.opacity = 1;
+
+        })
+    }
+    )
+}
+
+function draw() {
+    make_grid();
+    drawing();
+}
+
+draw();

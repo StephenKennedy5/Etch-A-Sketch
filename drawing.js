@@ -18,7 +18,7 @@ function drawing() {
     divs.forEach((item) => {
         const gridItem = item;
         gridItem.count = 0;
-        addEventListener('mouseover', (e) => {
+        gridItem.addEventListener('mouseover', (e) => {
             e.target.style.backgroundColor = 'black';
             e.target.style.opacity = 1;
 
@@ -27,9 +27,25 @@ function drawing() {
     )
 }
 
+// erase colors from grid
+function erase() {
+    const toErase = document.getElementById('erase');
+
+    toErase.addEventListener('click', (e) => {
+        const divs = document.querySelectorAll("#container > div");
+        divs.forEach((item) => {
+            const gridItem = item;
+            gridItem.style.backgroundColor = 'grey';
+        })
+    });
+
+
+}
+
 function draw() {
     make_grid();
     drawing();
+    erase();
 }
 
 draw();

@@ -18,7 +18,7 @@ body {
     width: 50px;
 }
 
-#container > div:hover {
-    background-color: black;
+erase-div {
+    display: flex;
 }
 

@@ -1,0 +1,18 @@
+body {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+#container {
+    display: inline-grid;
+    grid-template-columns: repeat(9,auto);
+    background-color: grey;
+}
+
+#container > div {
+    background-color: black;
+    /* aspect-ratio: 1; */
+    height: 50px;
+    width: 50px;
+}

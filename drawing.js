@@ -9,11 +9,14 @@ function grid_size() {
     buttons.forEach((button) => {
         button.addEventListener('click', () => {
             if (button.innerHTML === "small") {
-                make_grid(button.innerHTML,small)
+                make_grid(button.innerHTML,small);
+                drawing();
             } else if (button.innerHTML === "medium") {
-                make_grid(button.innerHTML,medium)
+                make_grid(button.innerHTML,medium);
+                drawing();
             } else {
-                make_grid(button.innerHTML,large)
+                make_grid(button.innerHTML,large);
+                drawing();
             }
         })
     })
@@ -21,7 +24,7 @@ function grid_size() {
 }
 
 // make grid
-function make_grid(size,size_val) {
+function make_grid(size = 'small',size_val=(16*16)) {
     const toAdd = document.getElementById('container');
     
     toAdd.innerHTML = '';
@@ -79,8 +82,9 @@ function erase() {
 }
 
 function draw() {
-    grid_size();
+    make_grid();
     drawing();
+    grid_size();
     erase();
 }
 
